@@ -1,6 +1,5 @@
 package org.matsim.contrib.carsharing.runExample;
 
-import java.lang.reflect.Field;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -50,7 +49,6 @@ import org.matsim.core.network.NetworkUtils;
 import org.matsim.core.network.algorithms.TransportModeNetworkFilter;
 import org.matsim.core.router.util.TravelTime;
 import org.matsim.core.scenario.ScenarioUtils;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import com.google.inject.Key;
 import com.google.inject.name.Names;
@@ -83,8 +81,6 @@ public class RunCarsharing {
 
 		
 		installCarSharing(controler);
-		
-		controler.printController();
 
 		controler.run();
 		
