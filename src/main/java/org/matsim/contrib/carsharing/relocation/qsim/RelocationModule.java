@@ -26,7 +26,8 @@ public class RelocationModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
-
+		// added by bjoy
+		System.out.println("ClassName: " + this.getClass().getName());
 	}
 
 	@Provides

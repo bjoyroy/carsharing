@@ -85,6 +85,7 @@ public class RunCarsharing {
 		controler.run();
 		
 		
+		
 
 	}
 
@@ -128,8 +129,10 @@ public class RunCarsharing {
 		final RouteCarsharingTrip routeCarsharingTrip = new RouteCarsharingTripImpl();
 		final VehicleChoiceAgent vehicleChoiceAgent = new VehicleChoiceAgentImpl();
 		// ===adding carsharing objects on supply and demand infrastructure ===
+		// comment bjoy
 		controler.addOverridingQSimModule(new CarSharingQSimModule());
 		controler.addOverridingModule(new DvrpTravelTimeModule());
+		// comment bjoy
 		controler.configureQSimComponents(CarSharingQSimModule::configureComponents);
 
 		controler.addOverridingModule(new AbstractModule() {
@@ -196,7 +199,8 @@ public class RunCarsharing {
 		});
 
 		// === routing moduels for carsharing trips ===
-
+		
+		// commented by bjoy
 		controler.addOverridingModule(CarsharingUtils.createRoutingModule());
 		
 		//controler.printController();
